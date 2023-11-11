@@ -1,0 +1,56 @@
+.app_header {
+    background: var(--color-primary);
+    color: var(--color-white-5);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+
+    font-family: var(--font-family);
+}
+
+.app_header svg {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.app_header_profile {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    font-size: 16px;
+    letter-spacing: 0.2px;
+}
+
+.app_header_profile span {
+    font-weight: 700;
+}
+
+.app_header_logo {
+    display: flex;
+    align-items: center;
+}
+
+.app_header_logo h1 {
+    font-family: cursive;
+    letter-spacing: 12px;
+    font-size: 26px;
+}
+
+.app_header_info {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+
+    font-size: 16px;
+    letter-spacing: 0.2px;
+}
+
+.app_header_info_icons {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
