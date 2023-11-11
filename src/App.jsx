@@ -1,32 +1,26 @@
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Header, Layout } from './sections'
+import { Home } from './components'
 
-const Home = () => (
+const MiCuenta = () => (
   <div>
-    <h1>Home</h1>
-    <p>This is the home page content.</p>
-  </div>
-);
-
-const About = () => (
-  <div>
-    <h1>About</h1>
-    <p>This is the about page content.</p>
+    <h1>Mi cuenta</h1>
+    <p>This is the account page content.</p>
   </div>
 );
 
 const App = () => {
   return (
     <div className="app">
-      <Header />
       <Router>
-          <Layout>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-            </Routes>
-          </Layout>
+        <Header />
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/mi-cuenta" element={<MiCuenta />} />
+          </Routes>
+        </Layout>
       </Router>
     </div>
   )
