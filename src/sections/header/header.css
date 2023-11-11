@@ -15,6 +15,10 @@
     cursor: pointer;
 }
 
+.app_header svg:hover {
+    color: var(--color-black-50);
+}
+
 .app_header_profile {
     display: flex;
     align-items: center;

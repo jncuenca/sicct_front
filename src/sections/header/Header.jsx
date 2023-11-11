@@ -1,16 +1,17 @@
 import './header.css'
 import { BiHelpCircle, BiLogOutCircle, BiUserCircle } from 'react-icons/bi'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
 
-    const name = "Juan Cuenca"
+    const name = "Jazmín Valdez"
     const groups = "Contabilidad"
 
     return (
         <div className="app_header">
             <div className="app_header_profile">
-                    <BiUserCircle />
-                    <p><span>Hola</span>, {name}</p>
+                <Link to="/mi-cuenta"><BiUserCircle /></Link>
+                <p><span>Hola</span>, {name}</p>
             </div>
             <div className="app_header_logo">
                 <h1>SICCT</h1>
