@@ -58,3 +58,8 @@
     column-gap: 16px;
 }
 
+.app_header_info_icons a {
+    display: flex;
+    align-items: center;
+}
+

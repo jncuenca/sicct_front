@@ -11,13 +11,13 @@ const Layout = ({ children }) => {
             <Link to="/"><BiHomeAlt /><span>Inicio</span></Link>
           </li>
           <li>
-            <Link to="/"><BiAddToQueue /><span>Registro interno</span></Link>
+            <Link to="/registrar-transaccion"><BiAddToQueue /><span>Registro interno</span></Link>
           </li>
           <li>
-            <Link to="/"><BiTransfer /><span>Cobros</span></Link>
+            <Link to="/cobros"><BiTransfer /><span>Cobros</span></Link>
           </li>
           <li>
-            <Link to="/"><BiMoney /><span>Control de Efectivo</span></Link>
+            <Link to="/control-de-efectivo"><BiMoney /><span>Control de Efectivo</span></Link>
           </li>
           <li>
             <Link to="/mi-cuenta"><BiUser /><span>Mi cuenta</span></Link>

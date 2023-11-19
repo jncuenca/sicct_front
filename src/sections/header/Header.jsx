@@ -1,29 +1,55 @@
 import './header.css'
-import { BiHelpCircle, BiLogOutCircle, BiUserCircle } from 'react-icons/bi'
-import { Link } from 'react-router-dom'
+import { BiHelpCircle, BiLogOutCircle, BiUserCircle, BiLogInCircle } from 'react-icons/bi'
+import { Link, useNavigate } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({ onLogout, accessToken, user }) => {
+    const navigate = useNavigate();
 
-    const name = "Jazmín Valdez"
-    const groups = "Contabilidad"
+    const handleLogout = () => {
+        onLogout();
+        navigate('/login');
+    };
 
     return (
         <div className="app_header">
             <div className="app_header_profile">
-                <Link to="/mi-cuenta"><BiUserCircle /></Link>
-                <p><span>Hola</span>, {name}</p>
+                {
+                    accessToken ? (
+                        <>
+                            <Link to="/mi-cuenta"><BiUserCircle /></Link>
+                            <p><span>Hola</span>, {user && `${user.first_name} ${user.last_name}`}</p>
+                        </>
+                    ) : (
+                        <>
+                        <Link to="/login"><BiUserCircle /></Link>
+                            <p>No autenticado</p>
+                        </>
+                    )
+                }
             </div>
             <div className="app_header_logo">
                 <h1>SICCT</h1>
             </div>
             <div className="app_header_info">
-                <div className="app_header_info_groups">
-                    <p>{groups}</p>
-                </div>
-
+                {accessToken && (
+                    <>
+                     <div className="app_header_info_groups">
+                     <p>{user && user.groups[0]}</p>
+                    </div>
+                    </>
+                )}
+               
                 <div className="app_header_info_icons">
                     <BiHelpCircle />
-                    <BiLogOutCircle />
+                    { accessToken ? (
+                        <>
+                            <BiLogOutCircle onClick={handleLogout} />
+                        </>
+                    ) :(
+                        <>
+                            <Link to="/login"><BiLogInCircle /></Link>
+                        </>
+                    )}
                 </div> 
             </div>
         </div>
