@@ -1,3 +1,29 @@
 .app_transaction h1 {
     text-align: center;
 }
+
+.success-container {
+    padding: 8px 24px;
+    width: 750px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 1px solid rgba(16, 176, 16, 0.849);;
+}
+
+.success-container p {
+    color: rgba(16, 176, 16, 0.849);
+    text-align: center;
+}
+
+.error-container {
+    padding: 8px 24px;
+    width: 750px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 1px solid rgba(176, 16, 16, 0.913);
+}
+
+.error-container p {
+    color: rgba(176, 16, 16, 0.913);
+    text-align: center;
+}

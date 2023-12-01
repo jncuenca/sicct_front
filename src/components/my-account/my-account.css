@@ -1,0 +1,29 @@
+/* UserDetails.css */
+
+.user-details-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px;
+  }
+  
+  .column {
+    flex: 1;
+  }
+  
+  .label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .value {
+    margin-bottom: 15px;
+  }
+  
+  .group-item {
+    display: inline-block;
+    border-radius: 5px;
+  }
+  

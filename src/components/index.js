@@ -1,2 +1,5 @@
 export { default as Home } from './home/Home'
 export { default as Transaction } from './transaction/Transaction'
+export { default as MyAccount } from './my-account/MyAccount'
+export { default as Payments } from './payments/Payments'
+export { default as CashControl } from './cash-control/CashControl'

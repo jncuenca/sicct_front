@@ -1,5 +1,5 @@
 import './Layout.css'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { BiUser, BiHomeAlt, BiMoney, BiTransfer, BiAddToQueue } from 'react-icons/bi'
 
 const Layout = ({ children }) => {
@@ -8,19 +8,19 @@ const Layout = ({ children }) => {
       <div className="sidebar">
         <ul>
           <li>
-            <Link to="/"><BiHomeAlt /><span>Inicio</span></Link>
+            <NavLink to="/" exact activeClassName="active"><BiHomeAlt /><span>Inicio</span></NavLink>
           </li>
           <li>
-            <Link to="/registrar-transaccion"><BiAddToQueue /><span>Registro interno</span></Link>
+            <NavLink to="/registrar-transaccion" activeClassName="active"><BiAddToQueue /><span>Registro interno</span></NavLink>
           </li>
           <li>
-            <Link to="/cobros"><BiTransfer /><span>Cobros</span></Link>
+            <NavLink to="/cobros" activeClassName="active"><BiTransfer /><span>Cobros</span></NavLink>
           </li>
           <li>
-            <Link to="/control-de-efectivo"><BiMoney /><span>Control de Efectivo</span></Link>
+            <NavLink to="/control-de-efectivo" activeClassName="active"><BiMoney /><span>Control de Efectivo</span></NavLink>
           </li>
           <li>
-            <Link to="/mi-cuenta"><BiUser /><span>Mi cuenta</span></Link>
+            <NavLink to="/mi-cuenta" activeClassName="active"><BiUser /><span>Mi cuenta</span></NavLink>
           </li>
         </ul>
       </div>
