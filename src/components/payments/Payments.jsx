@@ -93,7 +93,7 @@ const Payments = ({ accessToken }) => {
     const service = filtroTipoServicio;
 
     let url = `http://localhost:8000/api/accounting/transactions/?page=1&period=${period}`;
-    if (service !== "todos") {
+    if (service === "Transferencias Otros Bancos" || service === "Transferencias Internas") {
       url += `&service=${encodeURIComponent(service)}`;
     } 
 
